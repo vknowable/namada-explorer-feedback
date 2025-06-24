@@ -1,0 +1,55 @@
+name: Block Explorer Audit Report
+description: Report any issues with the block explorers, including incorrect info, usability issues, or broken features.
+title: "[Explorer Audit] "
+labels: [explorer-audit, needs-triage]
+body:
+  - type: textarea
+    id: affected_explorers
+    attributes:
+      label: 🌐 Affected Explorer(s)
+      description: List all URLs where the issue occurs. If more than one, put each on its own line.
+      placeholder: |
+        https://explorer1.chainxyz.com/tx/ABC123
+        https://explorer2.chainxyz.com/tx/ABC123
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: issue_type
+    attributes:
+      label: ❓ Type of Issue
+      description: Check all that apply.
+      options:
+        - label: Incorrect or outdated information
+        - label: Feature not working / broken
+        - label: Confusing or unclear UX
+        - label: Missing data you expected to see
+        - label: Usability or design issue
+        - label: Other
+
+  - type: textarea
+    id: description
+    attributes:
+      label: 📝 What happened?
+      description: Briefly describe what you were doing, what you expected, and what went wrong.
+      placeholder: I was checking a transaction and noticed the status was blank even though the transaction was successful.
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: 🖼️ Screenshot / Recording (optional)
+      description: Add any images or screen recordings to help explain the issue.
+      placeholder: Drag and drop files here, or paste screenshots.
+
+  - type: textarea
+    id: suggestions
+    attributes:
+      label: 💡 Suggestions or Fix Ideas (optional)
+      description: If you have ideas to improve the issue or fix it, share them here.
+
+  - type: input
+    id: device_browser
+    attributes:
+      label: 🧪 Device & Browser Info (optional)
+      description: Helps us reproduce the issue.
+      placeholder: MacBook Air, Chrome 125
